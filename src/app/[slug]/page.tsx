@@ -23,7 +23,7 @@ export default async function BlogPage({ params }: { params: { slug: string } })
           src={blog.imageUrl}
           alt={blog.name}
           width={1200} // Define a width for the image
-          height={400} // Define a height for the image
+          height={1200} // Define a height for the image
           className="w-full h-64 object-cover"
         />
         <div className="p-6">
