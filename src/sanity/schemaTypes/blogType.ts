@@ -8,26 +8,26 @@ export const BlogSchema = defineType({
   fields: [
     defineField({
       name: 'name',
-      title:'Blog Name',
+      title:'Blog',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'slug',
+      title:'slug',
       type: 'slug',
-      title:'slug name',
       options: {source: 'title'},
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'description',
-      type: 'string',
       title:'Description',
+      type: 'text',
+      
           }),
     defineField({
       name: 'image',
-      title: 'Blog Image',
+      title: 'Image',
       type: 'image',
-    }),
-  ],
+      })
+    ]
 })
