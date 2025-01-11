@@ -13,7 +13,7 @@ interface Blog {
 
 export default async function BlogCard() {
   const blogData = await GetAllBlog();
-
+console.log("all data:",blogData)
   return (
     <main className="p-6">
       <h1 className="text-4xl font-bold text-gray-800 mb-4 text-center">My Blogs</h1>
@@ -37,8 +37,9 @@ export default async function BlogCard() {
                 <h2 className="text-lg font-semibold text-gray-800 mb-2">
                   {blog.name}
                 </h2>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 line-clamp-1">
                   {blog.description || "No description available"}
+                  Read more...
                 </p>
               </div>
             </Link>
